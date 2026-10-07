@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffe343">
+  <meta name="description" content="Issi’s pocket road book. Darwin to Tasmania, 20 October–14 November 2026. Explore the route, daily plans and places to stay.">
+  <title>Issi’s Big Adventure · The 2026 Road Book</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='2' y='2' width='60' height='60' rx='18' fill='%23ffe343' stroke='%23202119' stroke-width='4'/%3E%3Cpath d='M32 12a15 15 0 0 0-15 15c0 12 15 26 15 26s15-14 15-26a15 15 0 0 0-15-15Z' fill='%23c9271b'/%3E%3Ccircle cx='32' cy='27' r='6' fill='%23ffe343'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/leaflet.css">
+  <link rel="stylesheet" href="assets/MarkerCluster.css">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script defer src="assets/leaflet.js"></script>
+  <script defer src="assets/leaflet.markercluster.js"></script>
+  <script defer src="app.js?v=2"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to itinerary</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div><p class="eyebrow">THE 2026 ROAD BOOK</p><h1>Issi’s Big Adventure</h1><p class="trip-meta">20 October – 14 November <span aria-hidden="true"> / </span> <span>26 days on the road</span></p></div>
+      <img class="brand-sticker" src="assets/cheese-board.png" width="370" height="205" alt="Cheese Board Board · Issi Millhouse">
+    </div>
+  </header>
+  <nav class="navigation" aria-label="Road book sections">
+    <div class="nav-inner" role="tablist" aria-label="Trip details">
+      <button class="tab active" id="tab-days" type="button" role="tab" aria-controls="panel-days" aria-selected="true" data-tab="days"><span data-icon="route"></span>Route & days</button>
+      <button class="tab" id="tab-stays" type="button" role="tab" aria-controls="panel-stays" aria-selected="false" tabindex="-1" data-tab="stays"><span data-icon="tent"></span>Places to stay</button>
+      <button class="tab" id="tab-bookings" type="button" role="tab" aria-controls="panel-bookings" aria-selected="false" tabindex="-1" data-tab="bookings"><span data-icon="ticket"></span>Bookings</button>
+      <span class="nav-caption">Darwin to Tasmania · self-drive</span>
+    </div>
+  </nav>
+  <main class="workspace" id="content">
+    <section class="map-column" aria-label="Interactive trip map">
+      <div class="map-card">
+        <div class="map-top"><div><span class="eyebrow">TRIP MAP</span><h2>Australia route</h2></div><span class="map-badge">NT · SA · NSW · VIC · TAS</span></div>
+        <div class="map-wrap">
+          <div id="map" aria-label="Map of Australia with road route and trip stops"><p class="map-loading">Loading your Australia map…</p></div>
+          <div class="map-views" role="group" aria-label="Map view"><button id="australia-view" class="selected" type="button">All Australia</button><button id="route-view" type="button">Trip route</button></div>
+          <p id="map-error" class="map-error" hidden></p>
+        </div>
+        <div class="map-legend"><span><i class="road-line"></i>Driving route</span><span><i class="ferry-line"></i>Ferry (indicative)</span><span class="zoom-hint">Zoom in for local roads</span></div>
+        <div id="map-selection" class="map-selection"><span class="selection-icon" data-icon="pin"></span><div><strong>Darwin to Tasmania</strong><p>Tap a pin to explore a stop.</p></div><span class="small-tag">26 DAYS</span></div>
+      </div>
+      <p class="map-footnote">Tap grouped pins to see nearby stops.</p>
+    </section>
+    <div class="content-column">
+      <section id="panel-days" role="tabpanel" aria-labelledby="tab-days"><div class="section-intro"><p class="eyebrow">20 OCTOBER – 14 NOVEMBER</p><h2>Daily itinerary</h2></div><div id="itinerary"><p>Loading itinerary…</p></div></section>
+      <section id="panel-stays" role="tabpanel" aria-labelledby="tab-stays" hidden><div class="section-intro"><p class="eyebrow">OVERNIGHT STOPS</p><h2>Places to stay</h2><p>Three camping options and one motel / hotel per stop.</p><p class="note">Availability not confirmed.</p></div><div id="stays"></div><p class="panel-note">Alice Springs, Adelaide, Wagga Wagga, Geelong and Tasmania are left for your own accommodation arrangements. Some camping choices are different site types at the same property.</p></section>
+      <section id="panel-bookings" role="tabpanel" aria-labelledby="tab-bookings" hidden><div class="section-intro"><p class="eyebrow">RESERVATIONS</p><h2>Bookings & highlights</h2></div><div id="bookings"></div></section>
+      <footer class="roadbook-footer"><p>Issi’s Big Adventure · October / November 2026</p><p>Distances and drive times are the estimates in your itinerary, excluding stops. Check bookings, local conditions and sailing times before departure.</p><p><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">Map data: OpenStreetMap</a> · <a href="https://project-osrm.org/" target="_blank" rel="noopener">Road routing: OSRM</a></p></footer>
+    </div>
+  </main>
+  <noscript><p class="noscript">Please enable JavaScript to view the interactive map and road book.</p></noscript>
+</body>
+</html>
